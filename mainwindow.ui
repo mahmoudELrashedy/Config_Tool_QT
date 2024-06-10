@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>641</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>UART</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>68</y>
+        <width>311</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QSplitter" name="splitter_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Baud rate</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="BAUD_RATE">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>9600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>19200</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>38400</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>57600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>115200</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Parity</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="PARITY">
+          <item>
+           <property name="text">
+            <string>NO_PARITY</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>EVEN_PARITY</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ODD_PARITY</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Data bits</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="DATA_BITS">
+          <item>
+           <property name="text">
+            <string>EIGHT_BITS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NINE_BITS</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Stop bits</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="STOP_BITS">
+          <property name="font">
+           <font>
+            <bold>false</bold>
+           </font>
+          </property>
+          <item>
+           <property name="text">
+            <string>ONE_STOP_BIT</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TWO_STOP_BIT</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Sampling rate</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="SAMPLING_RATE">
+          <item>
+           <property name="text">
+            <string>OVER_8</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>OVER_16</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>350</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate Code</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>SPI</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>370</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate Code</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>361</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QSplitter" name="splitter_19">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clock phase</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="CLOCK_PHASE">
+          <item>
+           <property name="text">
+            <string>CPHA_WR_FRST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CPHA_R_FRST</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clock polarity</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="CLOCK_POLARITY">
+          <item>
+           <property name="text">
+            <string>CPOL_IDLE_HIGH</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CPOL_IDLE_LOW</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Master mode</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="MASTER_MODE">
+          <item>
+           <property name="text">
+            <string>MASTER_ENABLE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MASTER_DISABLE</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clock Prescaler</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="CLK_PRESCALER">
+          <item>
+           <property name="text">
+            <string>DIV_2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DIV_4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DIV_8</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DIV_16</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_21">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SPI state</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="SPI_STATE">
+          <item>
+           <property name="text">
+            <string>SPI_DISABLE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SPI_ENABLE</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
